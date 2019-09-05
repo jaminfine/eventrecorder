@@ -1,0 +1,306 @@
+{
+  "className": "qx.io.channel.transport.ITransport",
+  "packageName": "qx.io.channel.transport",
+  "name": "ITransport",
+  "superClass": null,
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 6,
+        "column": 0
+      },
+      "end": {
+        "line": 43,
+        "column": 3
+      }
+    },
+    "jsdoc": {
+      "@description": [
+        {
+          "name": "@description",
+          "body": "A Transport is an object that can send and receive arbitrary JSON objects to\na remote target using an endpoint object that does the actual communication\nwith the target. It can be used by one or more channels."
+        }
+      ]
+    }
+  },
+  "type": "interface",
+  "events": {
+    "message": {
+      "location": {
+        "start": {
+          "line": 12,
+          "column": 4
+        },
+        "end": {
+          "line": 12,
+          "column": 35
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "Whenever a endpoint sends a message over this transport,\nthis event is fired with the message object as data."
+          }
+        ]
+      },
+      "name": "message",
+      "type": "qx.event.type.Data"
+    }
+  },
+  "properties": {
+    "endpoint": {
+      "type": "property",
+      "name": "endpoint",
+      "abstract": true,
+      "mixin": false,
+      "access": "public"
+    },
+    "endpointName": {
+      "type": "property",
+      "name": "endpointName",
+      "abstract": true,
+      "mixin": false,
+      "access": "public"
+    },
+    "status": {
+      "type": "property",
+      "name": "status",
+      "abstract": true,
+      "mixin": false,
+      "access": "public"
+    }
+  },
+  "members": {
+    "sendMessage": {
+      "location": {
+        "start": {
+          "line": 41,
+          "column": 4
+        },
+        "end": {
+          "line": 41,
+          "column": 41
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "Send a message into the channel"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "messageObj {Object}"
+          }
+        ]
+      },
+      "type": "function",
+      "access": "public"
+    },
+    "getEndpoint": {
+      "type": "function",
+      "name": "getEndpoint",
+      "abstract": false,
+      "mixin": false,
+      "inherited": false,
+      "access": "public",
+      "property": "get",
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "Gets the (computed) value of the property <code>endpoint</code>.\n\nFor further details take a look at the property definition: {@link #endpoint}."
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "type": "any",
+            "desc": "Returns the value for endpoint"
+          }
+        ]
+      }
+    },
+    "setEndpoint": {
+      "type": "function",
+      "name": "setEndpoint",
+      "abstract": false,
+      "mixin": false,
+      "inherited": false,
+      "access": "public",
+      "property": "set",
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "Sets the user value of the property <code>endpoint</code>.\n\nFor further details take a look at the property definition: {@link #endpoint}."
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "type": "any",
+            "paramName": "value",
+            "desc": "Value for endpoint"
+          }
+        ]
+      }
+    },
+    "resetEndpoint": {
+      "type": "function",
+      "name": "resetEndpoint",
+      "abstract": false,
+      "mixin": false,
+      "inherited": false,
+      "access": "public",
+      "property": "reset",
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "Resets the user value of the property <code>endpoint</code>.\n\nThe computed value falls back to the next available value e.g. appearance, init or inheritance value depending on the property configuration and value availability.\n\nFor further details take a look at the property definition: {@link #endpoint}."
+          }
+        ]
+      }
+    },
+    "getEndpointName": {
+      "type": "function",
+      "name": "getEndpointName",
+      "abstract": false,
+      "mixin": false,
+      "inherited": false,
+      "access": "public",
+      "property": "get",
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "Gets the (computed) value of the property <code>endpointName</code>.\n\nFor further details take a look at the property definition: {@link #endpointName}."
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "type": "any",
+            "desc": "Returns the value for endpointName"
+          }
+        ]
+      }
+    },
+    "setEndpointName": {
+      "type": "function",
+      "name": "setEndpointName",
+      "abstract": false,
+      "mixin": false,
+      "inherited": false,
+      "access": "public",
+      "property": "set",
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "Sets the user value of the property <code>endpointName</code>.\n\nFor further details take a look at the property definition: {@link #endpointName}."
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "type": "any",
+            "paramName": "value",
+            "desc": "Value for endpointName"
+          }
+        ]
+      }
+    },
+    "resetEndpointName": {
+      "type": "function",
+      "name": "resetEndpointName",
+      "abstract": false,
+      "mixin": false,
+      "inherited": false,
+      "access": "public",
+      "property": "reset",
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "Resets the user value of the property <code>endpointName</code>.\n\nThe computed value falls back to the next available value e.g. appearance, init or inheritance value depending on the property configuration and value availability.\n\nFor further details take a look at the property definition: {@link #endpointName}."
+          }
+        ]
+      }
+    },
+    "getStatus": {
+      "type": "function",
+      "name": "getStatus",
+      "abstract": false,
+      "mixin": false,
+      "inherited": false,
+      "access": "public",
+      "property": "get",
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "Gets the (computed) value of the property <code>status</code>.\n\nFor further details take a look at the property definition: {@link #status}."
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "type": "any",
+            "desc": "Returns the value for status"
+          }
+        ]
+      }
+    },
+    "setStatus": {
+      "type": "function",
+      "name": "setStatus",
+      "abstract": false,
+      "mixin": false,
+      "inherited": false,
+      "access": "public",
+      "property": "set",
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "Sets the user value of the property <code>status</code>.\n\nFor further details take a look at the property definition: {@link #status}."
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "type": "any",
+            "paramName": "value",
+            "desc": "Value for status"
+          }
+        ]
+      }
+    },
+    "resetStatus": {
+      "type": "function",
+      "name": "resetStatus",
+      "abstract": false,
+      "mixin": false,
+      "inherited": false,
+      "access": "public",
+      "property": "reset",
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "Resets the user value of the property <code>status</code>.\n\nThe computed value falls back to the next available value e.g. appearance, init or inheritance value depending on the property configuration and value availability.\n\nFor further details take a look at the property definition: {@link #status}."
+          }
+        ]
+      }
+    }
+  },
+  "descendants": []
+}
